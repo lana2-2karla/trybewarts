@@ -51,3 +51,7 @@ main {
 #info {
   display: flex;
 }
+
+#rates {
+  display: inline;
+}
