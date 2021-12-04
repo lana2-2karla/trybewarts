@@ -47,3 +47,7 @@ main {
 #full-name {
   display: flex;
 }
+
+#info {
+  display: flex;
+}
