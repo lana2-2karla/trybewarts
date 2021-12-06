@@ -1,4 +1,4 @@
-// const divForm = document.querySelectorAll(".trybewarts-login");
+// requisito 3
 const addButton = document.querySelector('#btn');
 
 function submit(event) {
@@ -13,3 +13,14 @@ function submit(event) {
 }
 
 addButton.addEventListener('click', submit);
+
+// requisito 18
+const checkboxAgree = document.querySelector('#agreement');
+const submitBtn = document.querySelector('#submit-btn');
+checkboxAgree.addEventListener('change', (event) => {
+  if (event.target.checked) {
+    submitBtn.disabled = false;
+  } else {
+    submitBtn.disabled = true;
+  }
+});
