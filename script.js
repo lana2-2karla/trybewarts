@@ -24,3 +24,15 @@ checkboxAgree.addEventListener('change', (event) => {
     submitBtn.disabled = true;
   }
 });
+
+function counter() {
+  const comment = document.querySelector('#textarea').value;
+  document.getElementById('counter').innerHTML = 500 - comment.length;
+}
+
+counter();
+
+/* Referências:
+contador:  https://medium.com/walternascimentobarroso-pt/contador-de-caracteres-com-html-e-js-648ee612d7be
+https://www.ti-enxame.com/pt/javascript/mostrar-quantos-caracteres-restantes-em-uma-caixa-de-texto-html-usando-javascript/1068970731/
+*/
