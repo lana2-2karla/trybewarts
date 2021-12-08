@@ -63,6 +63,7 @@ function subjectCheck () {
   console.log(data);
 
 submitBtn.addEventListener('click',filledForm);
+
 /* Referências:
 Consulta ao repositório de Lilian Azevedo e Polyana Sousa : https://github.com/tryber/sd-018-b-project-trybewarts/blob/polyana-sousa-trybewarts/script.js;
 
