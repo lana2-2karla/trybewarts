@@ -29,7 +29,6 @@ function counter() {
   const comment = document.querySelector('#textarea').value;
   document.getElementById('counter').innerHTML = 500 - comment.length;
 }
-
 counter();
 
 const data = {
@@ -42,9 +41,20 @@ const data = {
   Observações: '-Observações-',
 };
 
+function subjectCheck() {
+  const subjectClass = document.querySelectorAll('input[class="subject"]:checked');
+  const boxChecked = [];
+  for (let i = 0; i < subjectClass.length; i += 1) {
+    boxChecked.push(subjectClass[i].value);
+  }
+  return boxChecked.join(', ');
+}
+const firstName = document.querySelector('#input-name').value;
+const lastName = document.getElementById('input-lastname').value;
+
 function filledForm(event) {
   event.preventDefault();
-  data.Nome = document.getElementById('input-name').value + ' ' + document.getElementById('input-lastname').value;
+  data.Nome = `${firstName} ${lastName}`;
   data.Email = document.getElementById('input-email').value;
   data.Casa = document.getElementById('house').value;
   data.Família = document.getElementById('evaluation-form').family.value;
@@ -52,25 +62,15 @@ function filledForm(event) {
   data.Avaliação = document.getElementById('evaluation-form').rate.value;
   data.Observações = document.getElementById('textarea').value;
 }
-function subjectCheck () {
-    const subjectClass = document.querySelectorAll('input[class="subject"]:checked');
-    const boxChecked = [];
-    for (let i = 0; i < subjectClass.length; i += 1) {
-      boxChecked.push(subjectClass[i].value);
-    }
-    return boxChecked.join(', ');
-  }
-  console.log(data);
 
-submitBtn.addEventListener('click',filledForm);
+submitBtn.addEventListener('click', filledForm);
 
 /* Referências:
 Consulta ao repositório de Lilian Azevedo e Polyana Sousa : https://github.com/tryber/sd-018-b-project-trybewarts/blob/polyana-sousa-trybewarts/script.js;
 
-Super Apoio do Kesley Muniz XP -B;
+Super Apoio do Kesley Muniz e Victor Hugo Turma XP tribo B e do;
 
-contador:  https://medium.com/walternascimentobarroso-pt/contador-de-caracteres-com-html-e-js-648ee612d7be
+contador:https://medium.com/walternascimentobarroso-pt/contador-de-caracteres-com-html-e-js-648ee612d7be
 https://www.ti-enxame.com/pt/javascript/mostrar-quantos-caracteres-restantes-em-uma-caixa-de-texto-html-usando-javascript/1068970731/;
 
-Acessa input type: radio: https://pt.stackoverflow.com/questions/219949/pegar-o-valor-do-input-radio-com-javascript
-*/
+Acessa input type radio:https://pt.stackoverflow.com/questions/219949/pegar-o-valor-do-input-radio-com-javascript */
